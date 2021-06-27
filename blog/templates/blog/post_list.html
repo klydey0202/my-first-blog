@@ -8,15 +8,13 @@
 		<h1><a href="/">Klyde's Blog</a></h1>
 	</header>
 
-	<p>
-		{% for post in posts %}
-    		<article>
-        		<time>published: {{ post.published_date }}</time>
-        		<h2><a href="">{{ post.title }}</a></h2>
-        		<p>{{ post.text|linebreaksbr }}</p>
-    		</article>
-		{% endfor %}
-	</p>
+	{% for post in posts %}
+    	<article>
+        	<time>published: {{ post.published_date }}</time>
+        	<h2><a href="">{{ post.title }}</a></h2>
+        	<p>{{ post.text|linebreaksbr }}</p>
+    	</article>
+	{% endfor %}
 
 </body>
 </html>
